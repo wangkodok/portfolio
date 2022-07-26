@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 
     <!-- jquery loading 플러그인 -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
 
     <!-- page transition 플러그인 animsition.css -->
     <link rel="stylesheet" href="motion-css/animsition.min.css">
@@ -185,7 +185,42 @@
             </div>
           </section>
         </div>
-        
+
+        <!-- HTML 스크롤 따라다니는 애니메이션 -->
+        <div class="scrollbar-circle"></div>
+        <div class="scrollbar-square"></div>
+
+        <style>
+          /* CSS 스크롤 따라다니는 애니메이션 */
+          .wrapper { overflow: hidden; }
+          .container { position: relative; }
+          div { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; }
+          a { text-decoration: none; }
+
+          .scrollbar-circle {
+            position: absolute; width: 200px; height: 200px; top: 0; left: 50px; background-color: #eee; border-radius: 400px; z-index: -9999; transform: translate(0, 0);
+          }
+          .scrollbar-square {
+            position: absolute; width: 100px; height: 100px; top: -8px; right: 150px; background-color: #eee; border-radius: 150px; z-index: -9999; transform: translate(0, 0);
+          }
+
+          .dark .scrollbar-circle { background-color: #333; }
+          .dark .scrollbar-square { background-color: #333; }
+        </style>
+        <script>
+          // JQ 스크롤 따라다니는 애니메이션
+          $(document).ready(function(){
+            var currentPosition = parseInt( $(".scrollbar-circle").css("top") );
+            var currentPosition = parseInt( $(".scrollbar-square").css("top") );
+            
+            $(window).scroll(function() {
+              var position = $(window).scrollTop();
+              $(".scrollbar-circle").stop().animate({ "top": position + currentPosition + "px" }, 1000);
+              $(".scrollbar-square").stop().animate({ "top": position + currentPosition + "px" }, 2000);
+            });
+          });
+        </script>
+
         <!-- 다크 모드 -->
         <div class="dark-mode">
           <button class="btn dark">
