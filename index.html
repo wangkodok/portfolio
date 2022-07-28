@@ -56,6 +56,43 @@
   </head>
   <body id="loading" class="light loading animsition" data-animsition-in-class="fade-in" data-animsition-in-duration="3000">
 
+    <!-- 스크롤 상단 이동 -->
+    <a href="#" class="top">Top</a>
+    <style>
+      a.top {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 100px;
+        z-index: 1000;
+        border: 1px solid #000;
+        background-color: #fff;
+        padding: 10px 20px;
+      }
+      .dark a.top {
+        border: 1px solid #fff;
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+    <script>
+      $(".top").on("click", function() {
+        // console.log( scrollTop() );
+        $('html').animate({
+          scrollTop: 0,
+        },1000)
+      });
+      $(window).scroll(function() {
+        var height = $(document).scrollTop();
+        if (height < 40) {
+          $(".top").hide();
+        } else {
+          $(".top").show();
+        }
+        console.log(height);
+      });
+    </script>
+
     <!-- 페이지 로딩 스피너 -->
     <img src="image/login.gif" class="login-loading" alt="login-loading">
 
