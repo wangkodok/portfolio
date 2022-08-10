@@ -8,124 +8,82 @@
     <link rel="stylesheet" href="common/reset.css" />
     <link rel="stylesheet" href="common/common.css" />
     <link rel="stylesheet" href="css/work.css" />
-
+    <!-- 스크롤 상단 이동 -->
+    <link rel="stylesheet" href="common/scrolltop.css" />
+    <!-- 다크 모드 -->
+    <link rel="stylesheet" href="common/dark-mode.css" />
+    <!-- 스크롤 따라다니는 애니메이션 -->
+    <link rel="stylesheet" href="common/scrollmotion.css" />
+    <!-- page transition animsition.min.css -->
+    <link rel="stylesheet" href="motion-css/animsition.min.css" />
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
-
-    <!-- jquery loading 플러그인 -->
-    <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
-
-    <!-- page transition 플러그인 animsition.css -->
-    <link rel="stylesheet" href="motion-css/animsition.min.css">
+    <!-- page transition plugin -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="motion-js/animsition.min.js"></script>
-
-    <!-- lsPreloader 플러그인 -->
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/lsPreloader.js"></script> -->
-
     <title>포트폴리오</title>
     <style>
-      /* 페이지 로딩 스피너 CSS */
-      .loading {
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        position: fixed;
-        display: block;
-        opacity: 1;
-        background: #ffffff;
-        z-index: 100;
-      }
-
-      .loading.hide {
-        position: static;
-      }
-    
-      .loading .login-loading {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 101;
-        width: auto;
-      }
-  </style>
+      /* 페이지 로딩 스피너 */
+      .loading { width: 100%; height: 100%; top: 0; left: 0; position: fixed; display: block; opacity: 1; background: #ffffff; z-index: 100; }
+      .loading.hide { position: static; }
+      .loading .login-loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 101; width: auto; }
+    </style>
   </head>
   <body id="loading" class="light loading animsition" data-animsition-in-class="fade-in" data-animsition-in-duration="3000">
-
-    <!-- 스크롤 상단 이동 -->
-    <a href="#" class="top">Top</a>
-    <style>
-      a.top {
-        position: fixed;
-        left: 50%;
-        transform: translate(-50%, 0);
-        bottom: 100px;
-        z-index: 1000;
-        border: 1px solid #000;
-        background-color: #fff;
-        padding: 10px 20px;
-      }
-      .dark a.top {
-        border: 1px solid #fff;
-        background-color: #000;
-        color: #fff;
-      }
-    </style>
+    <!-- 페이지 로딩 스피너 -->
+    <img src="image/login.gif" class="login-loading" alt="login-loading">
     <script>
-      $(".top").on("click", function() {
-        // console.log( scrollTop() );
-        $('html').animate({
-          scrollTop: 0,
-        },1000)
+      $(window).load(function () {
+        // 페이지 로딩 스피너 로드 시
+        $('.loading').show();
       });
-      $(window).scroll(function() {
-        var height = $(document).scrollTop();
-        if (height < 40) {
-          $(".top").hide();
-        } else {
-          $(".top").show();
-        }
-        console.log(height);
+
+      $(document).ready(function() {
+        // 페이지 로딩 스피너
+        $('.loading').hide();
+        $('.loading').addClass('hide');
+        $('.loading .login-loading').hide();
+
+        // 페이지 로딩 스피너 애니메이션
+        $(".animsition").animsition({
+          inClass: 'fade-in',
+          outClass: 'fade-out',
+          inDuration: 1500,
+          outDuration: 800,
+          linkElement: '.animsition-link',
+          // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+          loading: true,
+          loadingParentElement: 'body', //animsition wrapper element
+          loadingClass: 'animsition-loading',
+          loadingInner: '', // e.g '<img src="loading.svg" />'
+          timeout: false,
+          timeoutCountdown: 5000,
+          onLoadEvent: true,
+          browser: [ 'animation-duration', '-webkit-animation-duration' ],
+          // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+          // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+          overlay: false,
+          overlayClass: 'animsition-overlay-slide',
+          overlayParentElement: 'body',
+          transition: function(url){ window.location.href = url; },
+        });
       });
     </script>
 
-    <!-- 페이지 로딩 스피너 -->
-    <img src="image/login.gif" class="login-loading" alt="login-loading">
-
-    <div class="cursor" style="opacity: 1;">
-    </div>
+    <!-- 마우스 커서 -->
+    <div class="cursor"></div>
     <style>
-      html {
-        cursor: none;
-      }
-      a,
-      button {
-        cursor: none;
-      }
-      .cursor {
-        position: fixed;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background-color: #f5f5f5;
-        pointer-events: none;
-        mix-blend-mode: difference;
-        z-index: 9999;
-        transition: all 0.1s none;
-      }
+      /* 마우스 커서 */
+      html { cursor: none; }
+      a,button { cursor: none; }
+      .cursor { position: fixed; width: 24px; height: 24px; border-radius: 50%; background-color: #f5f5f5; pointer-events: none; mix-blend-mode: difference; z-index: 9999; transition: all 0.1s none; }
     </style>
     <script>
-      	var cursor = $(".cursor");
-        $(window).mousemove(function(e) {
-          cursor.css({
-            top: e.clientY - cursor.height() / 2,
-            left: e.clientX - cursor.width() / 2
-          });
-        });
+      // 마우스 커서
+      var cursor = $(".cursor");
+      $(window).mousemove(function(e) {
+        cursor.css({ top: e.clientY - cursor.height() / 2, left: e.clientX - cursor.width() / 2 });
+      });
     </script>
 
     <div id="wrapper" class="wrapper">
@@ -222,42 +180,9 @@
             </div>
           </section>
         </div>
-
-        <!-- HTML 스크롤 따라다니는 애니메이션 -->
+        <!-- 스크롤 따라다니는 애니메이션 -->
         <div class="scrollbar-circle"></div>
         <div class="scrollbar-square"></div>
-
-        <style>
-          /* CSS 스크롤 따라다니는 애니메이션 */
-          .wrapper { overflow: hidden; }
-          .container { position: relative; }
-          div { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; }
-          a { text-decoration: none; }
-
-          .scrollbar-circle {
-            position: absolute; width: 200px; height: 200px; top: 0; left: 50px; background-color: #eee; border-radius: 400px; z-index: -9999; transform: translate(0, 0);
-          }
-          .scrollbar-square {
-            position: absolute; width: 100px; height: 100px; top: -8px; right: 150px; background-color: #eee; border-radius: 150px; z-index: -9999; transform: translate(0, 0);
-          }
-
-          .dark .scrollbar-circle { background-color: #333; }
-          .dark .scrollbar-square { background-color: #333; }
-        </style>
-        <script>
-          // JQ 스크롤 따라다니는 애니메이션
-          $(document).ready(function(){
-            var currentPosition = parseInt( $(".scrollbar-circle").css("top") );
-            var currentPosition = parseInt( $(".scrollbar-square").css("top") );
-            
-            $(window).scroll(function() {
-              var position = $(window).scrollTop();
-              $(".scrollbar-circle").stop().animate({ "top": position + currentPosition + "px" }, 1000);
-              $(".scrollbar-square").stop().animate({ "top": position + currentPosition + "px" }, 2000);
-            });
-          });
-        </script>
-
         <!-- 다크 모드 -->
         <div class="dark-mode">
           <button class="btn dark">
@@ -267,7 +192,6 @@
             <span class="blind">라이트 모드</span>
           </button>
         </div>
-
       </main>
       <footer class="footer">
         <div class="content-inner">
@@ -278,80 +202,17 @@
         </div>
       </footer>
     </div>
+    <!-- 스크롤 상단 이동 -->
+    <button class="top">Top</button>
 
     <script src="js/sub.js"></script>
-
-    <script>
-      $(window).load(function () {
-        $('.loading').show();
-      });
-
-      $(document).ready(function() {
-        // 페이지 로딩 스피너
-        $('.loading').hide();
-        $('.loading').addClass('hide');
-        $('.loading .login-loading').hide();
-
-        // 페이지 로딩 시 애니메이션
-        $(".animsition").animsition({
-          inClass: 'fade-in',
-          outClass: 'fade-out',
-          inDuration: 1500,
-          outDuration: 800,
-          linkElement: '.animsition-link',
-          // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-          loading: true,
-          loadingParentElement: 'body', //animsition wrapper element
-          loadingClass: 'animsition-loading',
-          loadingInner: '', // e.g '<img src="loading.svg" />'
-          timeout: false,
-          timeoutCountdown: 5000,
-          onLoadEvent: true,
-          browser: [ 'animation-duration', '-webkit-animation-duration'],
-          // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-          // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-          overlay : false,
-          overlayClass : 'animsition-overlay-slide',
-          overlayParentElement : 'body',
-          transition: function(url){ window.location.href = url; }
-        });
-
-        // 다크 모드 클릭
-        $(".dark-mode .btn").on("click", function() {
-          if($("body").hasClass("light")) {
-            // 다크 모드
-            $("body").addClass("dark");
-            $("body").removeClass("light");
-            $(".dark-mode .dark").show();
-            $(".dark-mode .light").hide();
-          } else {
-            // 라이트 모드
-            $("body").addClass("light");
-            $("body").removeClass("dark");
-            $(".dark-mode .dark").hide();
-            $(".dark-mode .light").show();
-          }
-        });
-
-        // $("#wrapper").lsPreloader({
-        //   backgroundColor: "#000",
-        //   backgroundImage: "",
-        //   backgroundRepeat: "repeat",
-        //   logoImage: "",
-        //   progressShow: true,
-        //   progressColor: "#FFF",
-        //   progressHeight: "10px",
-        //   progressPosition: "bottom",
-        //   percentShow: true,
-        //   percentFontFamily: "Verdana, Geneva, sans-serif",
-        //   percentFontSize: "50px",
-        //   animationComplete: "fade",
-        //   minimumTime: .5,
-        //   onStart: function(){},
-        //   onComplete: function(){}
-        // });
-
-      });
-    </script>
+    <!-- page transition min -->
+    <script src="motion-js/animsition.min.js"></script>
+    <!-- 스크롤 상단 이동 -->
+    <script src="js/scrolltop.js"></script>
+    <!-- 다크 모드 -->
+    <script src="js/dark-mode.js"></script>
+    <!-- 스크롤 따라다니는 애니메이션 -->
+    <script src="js/scrollmotion.js"></script>
   </body>
 </html>
