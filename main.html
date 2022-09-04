@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" />
+    <link rel="stylesheet" href="common/reset.css" />
+    <link rel="stylesheet" href="common/common.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <!-- 공통 자바스크립트 -->
+    <script src="js/common.js" defer></script>
+    <title>포트폴리오</title>
+  </head>
+  <body>
+    <div id="wrapper" class="wrapper">
+      <header class="header">
+        <div class="content-inner">
+          <div class="cotnent-head">
+            <ul class="list">
+              <li>
+                <a href="#">소개</a>
+              </li>
+              <li>
+                <a href="#">포트폴리오</a>
+              </li>
+            </ul>
+            <button class="menu">
+              <span class="line-box">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </span>
+            </button>
+            <div class="full-menu-content">
+              <div class="full-menu">
+                <ul>
+                  <li class="item">
+                    <a href="#">About Me</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Work</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container main-container">
+        <section class="section-wrapper">
+          <div class="section-content">
+            <div class="section 1">
+              <p>콘텐츠 첫 번째 01</p>
+            </div>
+            <div class="section 2">
+              <p>콘텐츠 두 번째 02</p>
+            </div>
+            <div class="section 3">
+              <p>콘텐츠 세 번째 03</p>
+            </div>
+            <div class="section-footer 4">
+              <p>푸터</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- <footer class="footer">
+        <div class="content-inner">
+          <div class="cotnent-foot">
+            <address>구직활동을 위한 개인 포트폴리오 사이트이며, 비상업적 용도로만 사용됩니다.</address>
+            <strong>@김승구</strong>
+          </div>
+        </div>
+      </footer> -->
+    </div>
+    <script>
+      const sectionWrapper = document.querySelector(".section-wrapper");
+      const sectionContent = document.querySelector(".section-content");
+      const section = document.querySelectorAll(".section");
+      let count = 0
+      for (let i = 0; i < section.length; i++) {
+        section[i].addEventListener("wheel", WheelEvent);
+      }
+      function WheelEvent(event) {
+        let y = event.wheelDelta;
+        console.log(y);
+        if (y < 0) {
+          if (count < section.length - 1) {
+            count++;
+            console.log(count, '아래');
+            sectionContent.style.top = `-${count}00%`;
+          }
+        } else {
+          if (count > 0) {
+            count--;
+            console.log(count, '위');
+            sectionContent.style.top = `-${count}00%`;
+          }
+        }
+      }
+      sectionContent.addEventListener("transitionend", () => {
+        fixedHeader(count)
+      });
+      function fixedHeader(cur){
+        if (cur == 6){
+            return false
+        }
+        section[cur].classList.add('ani');
+      }
+    </script>
+  </body>
+</html>
