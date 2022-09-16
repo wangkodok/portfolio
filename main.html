@@ -13,42 +13,6 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <!-- 공통 자바스크립트 -->
     <script src="js/common.js" defer></script>
-    <style>
-          .fullpage {
-            height: 100vh;
-            overflow: hidden;
-          }
-          .fullpage > .section-fullpage {
-            transition: all 0.7s ease;
-            transition-duration: 1s;
-          }
-          .fullpage > .section-fullpage > .fullpage-item {
-            height: 100vh;
-            font-size: 100px;
-            font-weight: 700;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .fullpage > .section-fullpage > .fullpage-item:nth-child(1) {background-color: red;}
-          .fullpage > .section-fullpage > .fullpage-item:nth-child(2) {background-color: orange;}
-          .fullpage > .section-fullpage > .fullpage-item:nth-child(3) {background-color: yellow;}
-          .fullpage > .section-fullpage > .fullpage-item:nth-child(4) {background-color: green;}
-          .fullpage > .section-fullpage > .fullpage-item:nth-child(5) {background-color: blue;}
-          .fullpage > .section-fullpage > .fullpage-item:nth-child(6) {background-color: rebeccapurple;}
-          .fullpage > .section-fullpage > .fullpage-item:nth-child(7) {background-color: aquamarine;}
-          .fullpage > .section-fullpage > .fullpage-item:nth-child(8) {background-color: firebrick;}
-          .fullpage > .section-fullpage > .fullpage-item:nth-child(9) {background-color: darkkhaki;}
-          .fullpage > .section-fullpage > .fullpage-item > .fullpage-title {
-            font-size: 64px;
-            font-weight: 700;
-            color: #fff;
-          }
-          .footer {
-            color: #fff;
-            background-color: darkblue;
-          }
-    </style>
     <title>포트폴리오</title>
   </head>
   <body>
@@ -92,7 +56,17 @@
       <div class="container main-container">
         <div class="fullpage">
           <div class="section-fullpage">
-            <section class="fullpage-item"><h3 class="fullpage-title">1 - fullpage</h3></section>
+            <section class="fullpage-item">
+              <h3 class="blind">1번 작업물</h3>
+              <video muted autoplay loop>
+                <source src="image/main_visual_video.mp4" type="video/mp4">
+              </video>
+              <div class="text-content">
+                <strong class="title">라인 채용 사이트</strong>
+                <p class="desc">최신 기술 Flexbox로 반응형 웹 구현했습니다.</p>
+                <a href="" class="page-link">포트폴리오 바로가기</a>
+              </div>
+            </section>
             <section class="fullpage-item"><h3 class="fullpage-title">2 - fullpage</h3></section>
             <section class="fullpage-item"><h3 class="fullpage-title">3 - fullpage</h3></section>
             <section class="fullpage-item"><h3 class="fullpage-title">4 - fullpage</h3></section>
