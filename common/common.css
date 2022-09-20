@@ -40,7 +40,8 @@ img {
 }
 
 .header .full-menu-content {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -49,14 +50,45 @@ img {
   z-index: 1000;
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  /* background-color: #fff; */
+  transition: all 0.5s ease 0.3s;
 }
 
 .header .full-menu-content.on {
-  display: block;
+  /* display: block; */
+  visibility: visible;
 }
 
-.header .full-menu {}
+.header .full-menu-content .bg-list {
+  display: flex;
+}
+
+.header .full-menu-content .bg-item {
+  position: relative;
+  width: calc(100% / 4);
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #eee;
+  transition: all 0.5s ease;
+}
+
+.header .full-menu-content .bg-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #eee;
+}
+
+.header .full-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
 .header .full-menu ul {
   display: flex;
