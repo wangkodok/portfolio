@@ -63,7 +63,7 @@
       <div class="container main-container">
         <div class="fullpage">
           <div class="section-fullpage">
-            <section class="fullpage-item">
+            <section class="fullpage-item on">
               <h3 class="blind">1번 작업물</h3>
               <video muted autoplay loop>
                 <source src="image/main_visual_video.mp4" type="video/mp4">
@@ -118,6 +118,12 @@
             console.log(count, window.innerHeight);
             ul.style.transform = `translate( 0, -${ (window.innerHeight * count) - (window.innerHeight - footer.offsetHeight) }px )`;
           } else {
+            for (let i = 0; i < li.length; i++) {
+              console.log(li[i].classList.remove('on'));
+              if (i === count) {
+                console.log(li[i].classList.add('on'));
+              }
+            }
             ul.style.transform = `translate( 0, -${ window.innerHeight * count }px )`;
           }
         } else {
@@ -131,6 +137,12 @@
           if (count === li.length) {
             ul.style.transform = `translate( 0, -${ (window.innerHeight * count) - (window.innerHeight - 100) }px )`;
           } else {
+            for (let i = 0; i < li.length; i++) {
+              console.log(li[i].classList.remove('on'));
+              if (i === count) {
+                console.log(li[i].classList.add('on'));
+              }
+            }
             ul.style.transform = `translate( 0, -${ window.innerHeight * count }px )`;
           }
         }
