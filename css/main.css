@@ -421,10 +421,6 @@ ul, li {
     margin: 0 0 0.286rem 0; /* 0 0 4px 0 */
   }
 
-  .header .list {
-    flex-direction: column;
-  }
-
   .container {
     margin: 13.571rem 0 0 0; /* 190px 0 0 0 */
   }
@@ -446,7 +442,7 @@ ul, li {
     font-size: 1.143rem; /* 16px */
     padding: 0.571rem 0.857rem; /* 8px 12px */
   }
-
+  
   .content-inner {
     max-width: none;
     padding: 0 1.143rem; /* 0 16px */

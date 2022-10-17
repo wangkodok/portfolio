@@ -242,6 +242,10 @@ img {
   .header .content-inner {
     padding: 1.429rem 1rem; /* 20px 14px */
   }
+  
+  .header .list {
+    flex-direction: column;
+  }
 
   .header .full-menu a {
     font-size: 3.429rem; /* 48px */
