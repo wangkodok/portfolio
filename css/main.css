@@ -421,12 +421,30 @@ ul, li {
     margin: 0 0 0.286rem 0; /* 0 0 4px 0 */
   }
 
+  .header .list {
+    flex-direction: column;
+  }
+
   .container {
     margin: 13.571rem 0 0 0; /* 190px 0 0 0 */
   }
 
   .main-container {
     margin: 0;
+  }
+
+  .fullpage .text-content .title {
+    font-size: 1.714rem; /* 24px */
+  }
+
+  .fullpage .text-content .desc {
+    font-size: 1.143rem; /* 16px */
+    padding: 0 2.286rem; /* 0 32px */
+  }
+
+  .fullpage .text-content .page-link {
+    font-size: 1.143rem; /* 16px */
+    padding: 0.571rem 0.857rem; /* 8px 12px */
   }
 
   .content-inner {
