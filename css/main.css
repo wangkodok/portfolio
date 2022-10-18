@@ -187,7 +187,16 @@ body {
   /* height: calc(var(--vh, 1vh) * 100); */
 
   overflow: hidden;
+  touch-action: pan-x;
 }
+body {
+  touch-action: pan-x;
+}
+
+
+
+
+
 /* body { */
   /* min-height: 100vh; */
   /* mobile viewport bug fix */
@@ -197,13 +206,13 @@ body {
 /* html { */
   /* height: -webkit-fill-available; */
 /* } */
-body {
+/* body {
   min-height: 100vh;
   
   @supports (-webkit-touch-callout: none) {
     min-height: -webkit-fill-available;
   }
-}
+} */
 /* body {
   width: 100vw;
   height: 100vh;
