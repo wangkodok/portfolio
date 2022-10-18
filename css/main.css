@@ -168,7 +168,9 @@ ul, li {
 
 .fullpage {
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  /* height: calc(var(--vh, 1vh) * 100); */
+  height: -webkit-fill-available;
+  height: fill-available;
   overflow: hidden;
 }
 
