@@ -184,7 +184,11 @@ body {
   min-height: -webkit-fill-available;
   overflow: hidden;
 }
-
+body {
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
 /* @media only screen and (max-device-width: 640px) {
   .fullpage { 
     height: calc(var(--var, 1vh) * 100);
