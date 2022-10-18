@@ -188,11 +188,11 @@ body {
 
   overflow: hidden;
   touch-action: pan-x;
+  height: calc(var(--vh, 1vh) * 100);
 }
 body {
   touch-action: pan-x;
 }
-
 
 
 
