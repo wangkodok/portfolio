@@ -284,13 +284,20 @@
 //   document.documentElement.style.setProperty('--vh', vh + 'px');
 // });
 
-const setVh = () => {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-};
+// const setVh = () => {
+//   const vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty('--vh', `${vh}px`);
+// };
 
-window.addEventListener('load', setVh);
-window.addEventListener('resize', setVh);
+// window.addEventListener('load', setVh);
+// window.addEventListener('resize', setVh);
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', vh + 'px');
+window.addEventListener('resize', function () {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+});
     </script>
   </body>
 </html>
