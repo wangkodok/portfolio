@@ -166,12 +166,28 @@ ul, li {
   height: 10vh;
 }
 
+:root {
+  --vh: 100%;
+}
+
+html,
+body {
+   height: 100vh;
+   height: var(--vh);
+}
+
 .fullpage {
   height: 100vh;
   /* height: calc(var(--vh, 1vh) * 100); */
-  height: -webkit-fill-available;
-  height: fill-available;
+  /* height: -webkit-fill-available; */
+  /* height: fill-available; */
   overflow: hidden;
+}
+
+@media only screen and (max-device-width: 640px) {
+  .fullpage { 
+    height: calc(var(--var, 1vh) * 100);
+  }
 }
 
 .fullpage .section-fullpage {
