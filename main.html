@@ -186,6 +186,62 @@
         ul.style.transform = `translate( 0, -${ window.innerHeight * count }px )`;
         console.log('section 태그 높이 사이즈');
       }
+      
+      // 모바일 터치 기능
+      let touchPos;
+      // 각 터치 시작 시 터치 위치 저장
+      window.ontouchstart = function(e){
+        for (let i = 0; i < li.length; i++) {
+          touchPos = e.changedTouches[0].clientY;
+          console.log(e.changedTouches);
+        }
+      }
+      // "오래된" touchPos인지 여부 감지
+      // newTouchPos보다 크거나 작음
+      window.ontouchmove = function(e){
+        let newTouchPos = e.changedTouches[0].clientY;
+        if(chk) {
+          // 마우스 휠 제어
+          chk = false;
+          setTimeout(function() {
+              chk = true;
+          }, 1000);
+
+          if (newTouchPos > touchPos) {
+            console.log("finger moving down");
+            if (count > 0) {
+              count = count - 1;
+              animate = true;
+              ul.addEventListener('transitionend', function() {
+                  animate = false;
+              });
+            }
+            if (count === li.length) {
+              ul.style.transform = `translate( 0, -${ (window.innerHeight * count) - (window.innerHeight - 100) }px )`;
+            } else {
+              elementClassAdd();
+              heightSize();
+            }
+          }
+          if (newTouchPos < touchPos) {
+            console.log("finger moving up");
+            if (count < li.length) {
+              count = count + 1;
+              animate = true;
+              ul.addEventListener('transitionend', function() {
+                  animate = false;
+              });
+            }
+            if (count === li.length) {
+              console.log(count, window.innerHeight);
+              ul.style.transform = `translate( 0, -${ (window.innerHeight * count) - (window.innerHeight - footer.offsetHeight) }px )`;
+            } else {
+              elementClassAdd();
+              heightSize();
+            }
+          }
+        }
+      }
     </script>
   </body>
 </html>
