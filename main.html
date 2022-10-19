@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black" /> -->
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" />
     <link rel="stylesheet" href="common/reset.css" />
     <link rel="stylesheet" href="common/common.css" />
@@ -245,66 +242,6 @@
           }
         }
       }
-
-      // ios 사파리 모바일 vh 이슈 해결
-      // let vh = window.innerHeight * 0.01;
-      // document.documentElement.style.setProperty('--vh', `${vh}px`);
-      // window.addEventListener('resize', () => {
-      //   let vh = window.innerHeight * 0.01;
-      //   document.documentElement.style.setProperty('--vh', `${vh}px`);
-      // });
-
-//       let vh = 0;
-
-// (() => {
-//   vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// }, []);
-
-// const setVh = () => {
-//   document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`)
-// };
-// window.addEventListener('resize', setVh);
-// setVh();
-
-// let vh = window.innerHeight * 0.01;
-// document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-// // resize
-// window.addEventListener('resize', () => {
-//   let vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// })
-
-// let vh = window.innerHeight * 0.01;
-// document.documentElement.style.setProperty('--vh', vh + 'px');
-// console.log(document.documentElement.style.setProperty('--vh', vh + 'px'))
-// window.addEventListener('resize', function () {
-//   let vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', vh + 'px');
-// });
-
-// const setVh = () => {
-//   const vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// };
-
-// window.addEventListener('load', setVh);
-// window.addEventListener('resize', setVh);
-
-// let vh = window.innerHeight * 0.01;
-// document.documentElement.style.setProperty('--vh', vh + 'px');
-// window.addEventListener('resize', function () {
-//     let vh = window.innerHeight * 0.01;
-//     document.documentElement.style.setProperty('--vh', vh + 'px');
-// });
-
-const appHeight = () => {
-  const doc = document.documentElement
-  doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-}
-window.addEventListener('resize', appHeight)
-appHeight()
     </script>
   </body>
 </html>

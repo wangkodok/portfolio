@@ -166,80 +166,11 @@ ul, li {
   height: 10vh;
 }
 
-/* :root {
-  --vh: 100%;
-} */
-
-/* html,
-body {
-   height: 100vh;
-   height: var(--vh);
-} */
-
 .fullpage {
   height: 100vh;
-  /* height: calc(var(--vh, 1vh) * 100); */
-  /* height: -webkit-fill-available; */
-  /* height: fill-available; */
-  /* min-height: -webkit-fill-available; */
-  /* width: 100vw; */
-  /* height: 100vh; */
-  /* height: calc(var(--vh, 1vh) * 100); */
-
   overflow: hidden;
   touch-action: pan-x;
-  /* height: calc(var(--vh, 1vh) * 100); */
 }
-body {
-  touch-action: pan-x;
-}
-body {
-  width: 100vw;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-}
-:root {
-  --app-height: 100%;
-}
-
-html,
-body {
-   padding: 0;
-   margin: 0;
-   overflow: hidden;
-   width: 100vw;
-   height: 100vh;
-   height: var(--app-height);
-}
-
-
-
-/* body { */
-  /* min-height: 100vh; */
-  /* mobile viewport bug fix */
-  /* min-height: -webkit-fill-available; */
-/* } */
-
-/* html { */
-  /* height: -webkit-fill-available; */
-/* } */
-/* body {
-  min-height: 100vh;
-  
-  @supports (-webkit-touch-callout: none) {
-    min-height: -webkit-fill-available;
-  }
-} */
-/* body {
-  width: 100vw;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-} */
-/* @media only screen and (max-device-width: 640px) {
-  .fullpage { 
-    height: calc(var(--var, 1vh) * 100);
-  }
-} */
 
 .fullpage .section-fullpage {
   transition: all 0.7s ease;
