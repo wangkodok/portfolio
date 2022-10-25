@@ -78,7 +78,7 @@
       <div class="container main-container">
         <div class="fullpage">
           <div class="section-fullpage">
-            <section class="fullpage-item on">
+            <section class="fullpage-item">
               <h3 class="blind">1번 작업물</h3>
               <video muted autoplay loop playsinline>
                 <source src="image/main_visual_video.mp4" type="video/mp4">
@@ -241,6 +241,10 @@
             }
           }
         }
+      }
+      window.onload = () => {
+        const fullPageItem = document.querySelector('.fullpage .fullpage-item');
+        fullPageItem.classList.add('on');
       }
     </script>
   </body>
