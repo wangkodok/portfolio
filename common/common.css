@@ -126,6 +126,20 @@ img {
   width: 100%;
 }
 
+/* 스크롤 애니메이션 */
+.about-item .text-content > p {
+  opacity: 0;
+  transform: translate(0, 200px);
+  transition: all 0.9s ease;
+}
+
+.about-item .text-content > p.scroll-on {
+  opacity: 1;
+  transition: all 0.9s ease;
+  transform: translate(0, 0);
+}
+/* 끝 스크롤 애니메이션 */
+
 .container {
   margin: 11.875rem 0 0 0; /* 190px 0 0 0 */
 }
