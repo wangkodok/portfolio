@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.header {
+  background-color: #f6f8fa;
+  padding: 16px 16px 0;
+  border-bottom: 1px solid #d8dee4;
+}
+
+.logo {
+  display: flex;
+  padding: 0 0 8px 0;
+}
+
+.title {
+  padding: 6px 8px;
+  margin: 0 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.title:hover {
+  background-color: #eaedf1;
+  border-radius: 8px;
+}
+
+.menu .list {
+  display: flex;
+}
+
+.menu .item .area {
+  padding: 8px 0 7px;
+}
+
+.menu .item a {
+  padding: 6px 9px 6px;
+}
+
+.menu .item a:hover {
+  background-color: #eaedf1;
+  border-radius: 8px;
+}
+
+.menu .item svg {
+  vertical-align: text-bottom;
+}
+
+.menu .text {
+  font-size: 14px;
+  margin: 0 0 0 8px;
+}
