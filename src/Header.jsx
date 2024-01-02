@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import OverViewIcon from "./OverViewIcon";
 import RepositoriesIcon from "./RepositoriesIcon";
@@ -15,18 +16,18 @@ export default function Header() {
         <ul className={style.list}>
           <li className={style.item}>
             <div className={style.area}>
-              <a href="/">
+              <Link to="/Overview">
                 <OverViewIcon />
                 <span className={style.text}>Overview</span>
-              </a>
+              </Link>
             </div>
           </li>
           <li className={style.item}>
             <div className={style.area}>
-              <a href="/">
+              <Link to="/Repositories">
                 <RepositoriesIcon />
                 <span className={style.text}>Repositories</span>
-              </a>
+              </Link>
             </div>
           </li>
         </ul>
