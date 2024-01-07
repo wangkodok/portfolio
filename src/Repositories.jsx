@@ -1,10 +1,13 @@
 import Header from "./Header";
+import RepositoriesContainer from "./RepositoriesContainer";
+import Footer from "./Footer";
 
-export default function Repositories() {
+export default function Overview() {
   return (
-    <div>
+    <>
       <Header />
-      <div>Repositories</div>
-    </div>
+      <RepositoriesContainer />
+      <Footer />
+    </>
   );
 }

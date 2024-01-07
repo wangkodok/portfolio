@@ -1,0 +1,15 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer svg {
+  width: 24px;
+}
+
+footer p {
+  color: #656d76;
+  font-size: 12px;
+  margin: 0 0 0 8px;
+}

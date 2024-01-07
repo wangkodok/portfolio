@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.overview-content {
+  width: 896px;
+}
+
+.md {
+  padding: 16px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.md .desc {
+  margin: 0 0 16px 0;
+}

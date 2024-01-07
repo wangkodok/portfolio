@@ -1,0 +1,25 @@
+.achievements {
+  border-top: 1px solid #d8dee4;
+  margin: 16px 0 0 0;
+  padding: 16px 0 0 0;
+}
+
+.achievements .title {
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+.achievements .list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.achievements .list .item {
+  width: 25%;
+  margin: 0 0 10px;
+}
+
+.achievements img {
+  width: 48px;
+}

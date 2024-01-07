@@ -1,0 +1,12 @@
+.language_circle,
+.language_text {
+  margin: 0 6px 0 0;
+}
+
+.language_circle {
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 6px;
+  background-color: #f1e05a;
+}

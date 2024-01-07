@@ -1,10 +1,13 @@
 import Header from "./Header";
+import OverviewContainer from "./OverviewContainer";
+import Footer from "./Footer";
 
 export default function Overview() {
   return (
-    <div>
+    <>
       <Header />
-      <div>Overview</div>
-    </div>
+      <OverviewContainer />
+      <Footer />
+    </>
   );
 }
