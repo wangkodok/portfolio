@@ -11,32 +11,32 @@ import javascript from "./image/javascript.png";
 // import node from "./image/node.png";
 
 export const DummyData = {
-  overview_work: [
+  work: [
     {
-      work_number: 1,
-      work_title: "A 작업물",
-      work_desc: "A 작업물의 포트폴리오입니다.",
-      work_language: "JavaScript",
-      work_language_color: "#f1e05a",
+      number: 1,
+      title: "A 작업물",
+      text_content: "A 작업물의 포트폴리오입니다.",
+      dev_language: "JavaScript",
+      dev_language_color: "#f1e05a",
     },
     {
-      work_number: 2,
-      work_title: "B 작업물",
-      work_desc: "B 작업물의 포트폴리오입니다.",
-      work_language: "HTML",
-      work_language_color: "#e34c26",
+      number: 2,
+      title: "B 작업물",
+      desc: "B 작업물의 포트폴리오입니다.",
+      dev_language: "HTML",
+      dev_language_color: "#e34c26",
     },
     {
-      work_number: 3,
-      work_title: "C 작업물",
-      work_desc: "C 작업물의 포트폴리오입니다.",
-      work_language: "React",
-      work_language_color: "#5ed3f3",
+      number: 3,
+      title: "C 작업물",
+      desc: "C 작업물의 포트폴리오입니다.",
+      dev_language: "React",
+      dev_language_color: "#5ed3f3",
     },
   ],
-  overview_skill: [
+  skill: [
     {
-      skill_number: 1,
+      number: 1,
       skill_language: "javascript",
       skill_imgURL: javascript,
     },

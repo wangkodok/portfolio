@@ -6,7 +6,7 @@ export default function OverviewSkill() {
     <div className={style.skill}>
       <strong className={style.title}>Skill</strong>
       <ul className={style.list}>
-        {DummyData.overview_skill.map((data, index) => {
+        {DummyData.skill.map((data, index) => {
           return (
             <li key={index} className={style.item}>
               <img src={data.skill_imgURL} alt={data.skill_language} />
