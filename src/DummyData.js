@@ -16,16 +16,22 @@ export const DummyData = {
       work_number: 1,
       work_title: "A 작업물",
       work_desc: "A 작업물의 포트폴리오입니다.",
+      work_language: "JavaScript",
+      work_language_color: "#f1e05a",
     },
     {
       work_number: 2,
       work_title: "B 작업물",
       work_desc: "B 작업물의 포트폴리오입니다.",
+      work_language: "HTML",
+      work_language_color: "#e34c26",
     },
     {
       work_number: 3,
       work_title: "C 작업물",
       work_desc: "C 작업물의 포트폴리오입니다.",
+      work_language: "React",
+      work_language_color: "#5ed3f3",
     },
   ],
   overview_skill: [

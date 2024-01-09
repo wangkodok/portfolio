@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import RepositoriesIcon from "../../RepositoriesIcon";
-import Language from "../common/Language";
+import ProjectLanguage from "../common/ProjectLanguage";
 import { DummyData } from "../../DummyData";
 import style from "./OverviewItem.module.css";
 
@@ -20,7 +20,10 @@ export default function OverviewItem() {
                 <p className={style.desc}>{data.work_desc}</p>
               </div>
               <p className={style.language}>
-                <Language />
+                <ProjectLanguage
+                  innerText={data.work_language}
+                  color={data.work_language_color}
+                />
               </p>
             </div>
           </li>
