@@ -15,20 +15,20 @@ export default function Header() {
       <div className={style.menu}>
         <ul className={style.list}>
           <li className={style.item}>
-            <div className={style.area}>
-              <Link to="/Overview">
+            <Link to="/Overview">
+              <div className={style.area}>
                 <OverViewIcon />
                 <span className={style.text}>Overview</span>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </li>
           <li className={style.item}>
-            <div className={style.area}>
-              <Link to="/Repositories">
+            <Link to="/Repositories">
+              <div className={style.area}>
                 <RepositoriesIcon />
                 <span className={style.text}>Repositories</span>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </li>
         </ul>
       </div>

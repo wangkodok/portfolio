@@ -27,15 +27,16 @@
   display: flex;
 }
 
-.menu .item .area {
+.menu .item a {
   padding: 8px 0 7px;
 }
 
-.menu .item a {
+.menu .item .area {
   padding: 6px 9px 6px;
 }
 
-.menu .item a:hover {
+.menu .item a:hover .area,
+.menu .item .area:hover {
   background-color: #eaedf1;
   border-radius: 8px;
 }
