@@ -1,4 +1,4 @@
-import ProfilePhoto from "../ProfilePhoto/ProfilePhoto";
+import ProfilePhoto from "../common/ProfilePhoto";
 import ProfileEdit from "../ProfileEdit/ProfileEdit";
 import ProfileSubscribe from "../ProfileSubscribe/ProfileSubscribe";
 import ProfileBadge from "../ProfileBadge/ProfileBadge";
