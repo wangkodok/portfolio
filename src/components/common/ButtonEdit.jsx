@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export default function ButtonEdit() {
-  return <Button>Edit profile</Button>;
+export default function ButtonEdit({ children, ...props }) {
+  return <Button {...props}>{children}</Button>;
 }
 
 const Button = styled.button`

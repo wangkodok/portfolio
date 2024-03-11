@@ -1,14 +1,14 @@
-import Profile from "./components/Profile/Profile";
+import Profile from "./components/common/Profile";
 import OverviewInfo from "./components/OverviewInfo/OverviewInfo";
-import style from "./OverviewContainer.module.css";
+import Inner from "./components/common/Inner";
 
 export default function OverviewContainer() {
   return (
     <main>
-      <div className={style["inner"]}>
+      <Inner>
         <Profile />
         <OverviewInfo />
-      </div>
+      </Inner>
     </main>
   );
 }

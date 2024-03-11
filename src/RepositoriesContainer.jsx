@@ -1,15 +1,14 @@
-import Profile from "./components/Profile/Profile";
+import Profile from "./components/common/Profile";
 import RepositoriesInfo from "./components/RepositoriesInfo/RepositoriesInfo";
-
-import style from "./OverviewContainer.module.css";
+import Inner from "./components/common/Inner";
 
 export default function RepositoriesContainer() {
   return (
     <main>
-      <div className={style["inner"]}>
+      <Inner>
         <Profile />
         <RepositoriesInfo />
-      </div>
+      </Inner>
     </main>
   );
 }

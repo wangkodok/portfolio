@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-.inner {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1216px;
-  margin: 0 auto;
-  padding: 32px;
-}

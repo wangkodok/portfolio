@@ -1,12 +1,24 @@
-import style from "./ProfileEdit.module.css";
 import ButtonEdit from "../common/ButtonEdit";
+import styled from "styled-components";
+
+const Title = styled.p`
+  font-size: 20px;
+  color: #656d76;
+  padding: 16px 0;
+  font-weight: 300;
+`;
+
+const Desc = styled.p`
+  color: #1f2328;
+  margin: 0 0 16px 0;
+`;
 
 export default function ProfileEdit() {
   return (
-    <div className={style.edit}>
-      <p className={style.title}>front-end & publisher</p>
-      <p className={style.desc}>포트폴리오</p>
-      <ButtonEdit />
+    <div>
+      <Title>front-end & publisher</Title>
+      <Desc>포트폴리오</Desc>
+      <ButtonEdit>Edit profile</ButtonEdit>
     </div>
   );
 }
