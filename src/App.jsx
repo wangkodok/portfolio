@@ -5,8 +5,8 @@ import Repositories from "./pages/Repositories";
 export default function App() {
   return (
     <Routes>
-      <Route path="/Overview" element={<Overview />} />
-      <Route path="/Repositories" element={<Repositories />} />
+      <Route path="/overview" element={<Overview />} />
+      <Route path="/repositories" element={<Repositories />} />
     </Routes>
   );
 }
