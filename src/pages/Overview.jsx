@@ -1,4 +1,4 @@
-import Header from "../Header";
+import Header from "../components/common/Header";
 import OverviewContainer from "../OverviewContainer";
 import Footer from "../Footer";
 

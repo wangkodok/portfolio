@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import Logo from "./components/common/Logo";
-import OverViewIcon from "./OverViewIcon";
-import RepositoriesIcon from "./RepositoriesIcon";
-import style from "./Header.module.css";
+import Logo from "./Logo";
+import OverViewIcon from "../../OverViewIcon";
+import RepositoriesIcon from "../../RepositoriesIcon";
+import style from "../../Header.module.css";
 
 export default function Header() {
   return (
