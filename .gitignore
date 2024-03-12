@@ -21,6 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Netlify 배포 후 Page Not Found Error 해결
-_redirects
