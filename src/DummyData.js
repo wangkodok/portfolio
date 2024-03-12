@@ -41,15 +41,15 @@ export const DummyData = {
       text_content: "개인 작업물을 모아둔 사이트입니다.",
       dev_language: "React",
       dev_language_color: "#5ed3f3",
-      project_link: "https://birthday-webapp.vercel.app/",
+      project_link: "https://main--nimble-axolotl-42cafe.netlify.app/overview",
       project_title: "Demo",
       reflectionContent: [
         {
-          link: "https://kimseunggu93.tistory.com/entry/%ED%9A%8C%EA%B3%A0%EB%A1%9D-%EB%A6%AC%EC%95%A1%ED%8A%B8-%ED%86%A0%EC%9D%B4%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%9D%BC-%EC%95%8C%EB%A6%BC-%EC%9B%B9%EC%95%B1-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%ED%95%98%EB%8A%94-%EC%A4%91",
+          link: "https://kimseunggu93.tistory.com/entry/%ED%9A%8C%EA%B3%A0%EB%A1%9D-GitHub-%EC%8A%A4%ED%83%80%EC%9D%BC%EC%9D%98-%EA%B0%9C%EC%9D%B8-%EC%82%AC%EC%9D%B4%ED%8A%B8-2%EC%B0%A8-%EC%9E%91%EC%97%85",
           title: "1차 회고록",
         },
         {
-          link: "https://birthday-webapp.vercel.app/",
+          link: "https://main--nimble-axolotl-42cafe.netlify.app/overview",
           title: "Demo",
         },
       ],
