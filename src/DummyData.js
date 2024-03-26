@@ -14,7 +14,7 @@ export const DummyData = {
   work: [
     {
       number: 1,
-      title: "생일 캘린더 플랫폼",
+      title: "생일 캘린더 플랫폼 작업 중",
       text_content: "리액트 토이프로젝트이며, 가상으로 플랫폼 구축",
       dev_language: "React",
       dev_language_color: "#5ed3f3",
