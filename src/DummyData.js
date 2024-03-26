@@ -1,5 +1,5 @@
 import javascript from "./image/javascript.png";
-// import react from "./image/react.png";
+import react from "./image/react.png";
 // import typescript from "./image/typescript.png";
 // import redux from "./image/redux.png";
 // import styled_component from "./image/styled_component.png";
@@ -74,6 +74,11 @@ export const DummyData = {
       number: 1,
       skill_language: "javascript",
       skill_imgURL: javascript,
+    },
+    {
+      number: 2,
+      skill_language: "react",
+      skill_imgURL: react,
     },
   ],
 };
