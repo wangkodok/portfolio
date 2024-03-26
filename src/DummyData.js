@@ -30,6 +30,10 @@ export const DummyData = {
           title: "2차 회고록",
         },
         {
+          link: "https://www.figma.com/file/fuiTA3BvsHD31IVdxeiECJ/%EC%83%9D%EC%9D%BC-%EC%BA%98%EB%A6%B0%EB%8D%94?type=design&node-id=0-1&mode=design",
+          title: "디자인",
+        },
+        {
           link: "https://birthday-webapp.vercel.app/",
           title: "Demo",
         },
