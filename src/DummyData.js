@@ -14,8 +14,8 @@ export const DummyData = {
   work: [
     {
       number: 1,
-      title: "생일 알림 웹앱",
-      text_content: "리액트 useState() 사용한 토이프로젝트입니다.",
+      title: "생일 캘린더 플랫폼",
+      text_content: "리액트 토이프로젝트이며, 가상으로 플랫폼 구축",
       dev_language: "React",
       dev_language_color: "#5ed3f3",
       project_link: "https://birthday-webapp.vercel.app/",
