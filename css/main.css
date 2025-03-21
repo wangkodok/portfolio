@@ -1,0 +1,337 @@
+@charset "utf-8";
+
+/* 비주얼 영역 */
+.sec-visual .title-area {
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+.sec-visual .title-area .text {
+  font-size: 10.4167vw;
+  font-weight: 900;
+  overflow: hidden;
+}
+
+.sec-visual .title-area .scroll-down {
+  background: url("../image/icon_scroll_down_arrow.svg") no-repeat center / auto 4.6875vw;
+}
+
+.sec-visual .title-area .scroll-down::after {
+  content: "";
+  background: url("../image/icon_scroll_down_text.svg") no-repeat center / contain;
+}
+
+/* 소개 */
+.sec_intro .title-area .sec-title {
+  line-height: 52px;
+}
+
+.sec_intro .title-area .layout-wrap {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: var(--font-Pretendard);
+  color: var(--color-black);
+}
+
+.sec_intro .title-area .desc {
+  line-height: 52px;
+}
+
+@media screen and (max-width: 1680px) {
+  .sec_intro .title-area .desc {
+    line-height: 48px;
+  }
+  
+  .sec_intro .title-area .desc .mobile {
+    display: none;
+  }
+}
+
+/* 이미지 백그라운드 */
+/* .image-bg .circle {
+  width: 100%;
+  height: 416px;
+  background: url("../image/image_circle.svg") no-repeat center / contain;
+} */
+
+/* 프로젝트 측정 */
+/* .sec_metrics .metrics-item {
+  font-family: var(--font-Montserrat);
+}
+
+.sec_metrics .metrics-item .text {
+  font-size: 64px;
+}
+
+.sec_metrics .metrics-item .sub-text {
+  font-size: 24px;
+  font-style: normal;
+} */
+
+/* 포트폴리오 시작 인트로 */
+.portfolio_start .text-area {
+  overflow: hidden;
+}
+
+.portfolio_start .text-area .desc {
+  width: 200%;
+  height: 244px;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.portfolio_start .text-area .desc.mywork {
+  /* width: 4508px; */
+  transform: translateX(-1400px);
+  background-image: url("../image/image_mywork.png")
+}
+
+.portfolio_start .text-area .desc.experience {
+  /* width: 5556px; */
+  transform: translateX(-1250px);
+  background-image: url("../image/image_experience.png")
+}
+
+.portfolio_start .text-area .desc.project {
+  /* width: 5414px; */
+  /* transform: translateX(-1580px); */
+  transform: translateX(-1400px);
+  background-image: url("../image/image_project.png")
+}
+
+@media screen and (max-width: 1680px) {
+  .portfolio_start .text-area {
+    display: none;
+  }
+}
+
+/* 포트폴리오 영역 */
+.sec_portfolio .portfolio-list .img-wrap {
+  overflow: hidden;
+  border-radius: 0 32px 0 0;
+}
+
+.sec_portfolio .portfolio-list .img-wrap::after {
+  content: "";
+  background: linear-gradient(0deg, #f5f9ef 0%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+.sec_portfolio .portfolio-list .img-wrap.right {
+  border-radius: 32px 0 0 0;
+}
+
+.sec_portfolio .text-area .title {
+  /* font-size: 200px;
+  font-weight: 900;
+  font-family: var(--font-Montserrat);
+  text-transform: uppercase;
+  line-height: 1; */
+  overflow: hidden;
+}
+
+.sec_portfolio .text-area .title-bg {
+  background-color: var(--color-black);
+}
+
+.sec_portfolio .text-area .title-name {
+  font-size: 200px;
+  font-weight: 900;
+  font-family: var(--font-Montserrat);
+  text-transform: uppercase;
+  line-height: 80%;
+}
+
+.sec_portfolio .text-area .sub-title {
+  font-size: 68px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.sec_portfolio .text-area .desc {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.78;
+  letter-spacing: -0.04em;
+}
+
+.sec_portfolio .link-list {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1680px) {
+  .sec_portfolio .portfolio-list .img-wrap {
+    border-radius: 0;
+  }
+  
+  .sec_portfolio .portfolio-list .img-wrap.right {
+    border-radius: 0;
+  }
+  
+  .sec_portfolio .text-area .title-name {
+    font-size: max(32px, 5.952vw);
+  }
+  
+  .sec_portfolio .text-area .sub-title {
+    font-size: max(24px, 2.381vw);
+  }
+  
+  .sec_portfolio .text-area .desc {
+    font-size: 24px;
+  }
+  
+  .sec_portfolio .text-area .desc .mobile {
+    display: none;
+  }
+  
+  .sec_portfolio .link-list {
+    font-size: 20px;
+  }
+}
+
+/* 포트폴리오 2020 ~ 2023 영역 */
+.sec-work .title-area {
+  font-family: var(--font-Montserrat);
+}
+
+.sec-work .title-area .title {
+  font-size: 120px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.sec-work .title-area .desc {
+  font-size: 120px;
+  font-weight: 900;
+}
+
+.sec-work .work-item {
+  box-shadow: inset 0 -1px var(--color-black);
+  transition: box-shadow .3s;
+  transition: box-shadow .3s, -webkit-box-shadow .3s;
+  -webkit-box-shadow: inset 0 -1px var(--color-black);
+  -webkit-transition: -webkit-box-shadow .3s;
+}
+
+.sec-work .work-item:hover {
+  box-shadow: inset 0 -111px var(--color-black);
+  -webkit-box-shadow: inset 0 -111px var(--color-black);
+}
+
+.sec-work .work-item a {
+  border-top: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+}
+
+.sec-work .work-item:hover a {
+  color: var(--color-white);
+}
+
+.sec-work .work-item .project-name,
+.sec-work .work-item .project-desc {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.sec-work .work-item .project-yyyy {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1680px) {
+  .sec-work .title-area .title {
+    font-size: 60px;
+  }
+  
+  .sec-work .title-area .desc {
+    font-size: 60px;
+  }
+
+  .sec-work .work-item:hover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  .sec-work .work-item {
+    box-shadow: none;
+    transition: initial;
+    -webkit-box-shadow: none;
+    -webkit-transition: none;
+  }
+
+  .sec-work .work-item:hover a {
+    color: var(--color-black);
+  }
+  
+  .sec-work .work-item .project-name,
+  .sec-work .work-item .project-desc {
+    font-size: 24px;
+  }
+
+  .sec-work .work-item .project-name {
+    font-weight: 700;
+  }
+  
+  .sec-work .work-item .project-yyyy {
+    font-size: 18px;
+  }
+}
+
+/* 프론트엔드 포트폴리오 영역 */
+.sec-front_end .sec-title {
+  font-family: var(--font-Montserrat);
+}
+
+.sec-front_end .sec-title .title {
+  font-size: 120px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.sec-front_end .sec-title .desc {
+  font-size: 120px;
+  font-weight: 900;
+}
+
+.sec-front_end .desc-add {
+  font-size: 32px;
+  line-height: 52px;
+}
+
+.sec-front_end .work-item .link {
+  overflow: hidden;
+}
+
+.sec-front_end .img-wrap {
+  transition: transform .5s ease;
+}
+
+.sec-front_end .img-wrap:hover {
+  transform: scale(1.1);
+}
+
+.sec-front_end .work-desc .title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sec-front_end .work-desc .desc {
+  font-size: 24px;
+  letter-spacing: -0.04em;
+  line-height: 1.78;
+}
+
+@media screen and (max-width: 1680px) {
+  .sec-front_end .sec-title {
+    display: block;
+    padding: 0 20px;
+  }
+
+  .sec-front_end .sec-title .title {
+    font-size: 60px;
+  }
+  
+  .sec-front_end .sec-title .desc {
+    font-size: 60px;
+  }
+}

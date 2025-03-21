@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "PlayfairDisplay-SemiBold";
+  src: url("../font/PlayfairDisplay-SemiBold.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  src: url("../font/PlayfairDisplay-Regular.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Medium";
+  src: url("../font/PlayfairDisplay-Medium.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-ExtraBold";
+  src: url("../font/PlayfairDisplay-ExtraBold.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Bold";
+  src: url("../font/PlayfairDisplay-Bold.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Black";
+  src: url("../font/PlayfairDisplay-Black.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../font/PretendardVariable.woff2") format("woff");
+}
+
+/* @font-face {
+  font-family: "SendFlowers-Regular";
+  src: url("../font/SendFlowers-Regular.ttf") format("woff");
+} */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat.ttf") format("woff");
+}
+
+/* @font-face {
+  font-family: "Creattion-Demo";
+  src: url("../font/Creattion-Demo.otf") format("woff");
+} */
+
+/* @font-face {
+  font-family: "Bacana";
+  src: url("../font/Bacana.ttf") format("woff");
+} */
+
+@font-face {
+  font-family: "Moonlight";
+  src: url("../font/Moonlight.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "areminiscentsmileRegularOblique";
+  src: url("../font/areminiscentsmile-RegularOblique.ttf") format("woff");
+}
