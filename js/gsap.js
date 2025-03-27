@@ -60,43 +60,6 @@ window.addEventListener("DOMContentLoaded", function () {
     delay: 0.3,
   });
 
-  // 포트폴리오 시작 인트로
-  gsap.to(".portfolio_start .text-area .desc.mywork", {
-    x: "-600px",
-    scrollTrigger: {
-      trigger: ".portfolio_start",
-      start: "top bottom",
-      end: "200% bottom",
-      scrub: true,
-      // markers: true,
-      anticipatePin: 1,
-    },
-  });
-
-  gsap.to(".portfolio_start .text-area .desc.experience", {
-    x: "-1580px",
-    scrollTrigger: {
-      trigger: ".portfolio_start",
-      start: "top bottom",
-      end: "200% bottom",
-      scrub: true,
-      // markers: true,
-      anticipatePin: 1,
-    },
-  });
-
-  gsap.to(".portfolio_start .text-area .desc.project", {
-    x: "-30px",
-    scrollTrigger: {
-      trigger: ".portfolio_start",
-      start: "top bottom",
-      end: "200% bottom",
-      scrub: true,
-      // markers: true,
-      anticipatePin: 1,
-    },
-  });
-
   // 포트폴리오 영역
   const portfolioItems = gsap.utils.toArray("#portfolio-list .portfolio-item");
 
@@ -147,45 +110,4 @@ window.addEventListener("DOMContentLoaded", function () {
     loading.to(desc, { y: "0%", opacity: 1, }, "-=0.45");
     loading.to(linkItem, { y: "0%", opacity: 1, stagger: 0.2 }, "-=0.4");
   });
-
-
-
-
-
-
-
-
-
-
-  // // 스크롤 시 텍스트를 채우는 애니메이션
-  // gsap.registerPlugin(ScrollTrigger);
-
-  // const splitTypes = document.querySelectorAll("#reveal-type");
-
-  // splitTypes.forEach((char, i) => {
-  //     const bg = char.dataset.bgColor;
-  //     const fg = char.dataset.fgColor;
-
-  //     const text = new SplitType(char, {
-  //         types: "chars, words",
-  //     });
-
-  //     gsap.from(text.chars, {
-  //         opacity: 0.2,
-  //         // opacity: 0,
-  //         stagger: 0.1,
-  //         // y: 100,
-  //         // scaleY: 0,
-  //         // y: -20,
-  //         transfromOrigin: "top",
-  //         scrollTrigger: {
-  //             trigger: char,
-  //             start: "100% 100%",
-  //             // end: "top, 20%",
-  //             end: "top 10",
-  //             scrub: true,
-  //             markers: true,
-  //         },
-  //     });
-  // });
 });
