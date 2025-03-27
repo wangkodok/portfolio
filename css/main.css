@@ -13,7 +13,8 @@
 }
 
 .sec-visual .title-area .scroll-down {
-  background: url("../image/icon_scroll_down_arrow.svg") no-repeat center / auto 4.6875vw;
+  transform: rotate(90deg);
+  background: url("../image/icon_scroll_down_arrow.svg") no-repeat center / auto 3.333vw;
 }
 
 .sec-visual .title-area .scroll-down::after {
