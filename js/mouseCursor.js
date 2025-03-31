@@ -40,12 +40,10 @@ window.addEventListener("load", () => {
     }
     
     if (isATag) {
-      console.log("오버");
       cursor.style.display = "none";
       cursorView.style.display = "flex";
 
     } else {
-      console.log("아웃");
       cursor.style.display = "block";
       cursorView.style.display = "none";
     }
