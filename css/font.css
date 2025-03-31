@@ -61,6 +61,21 @@
 }
 
 @font-face {
-  font-family: "areminiscentsmileRegularOblique";
-  src: url("../font/areminiscentsmile-RegularOblique.ttf") format("woff");
+  font-family: "areminiscentsmile-Regular";
+  src: url("../font/areminiscentsmile-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bargemo";
+  src: url("../font/Bargemo.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "HarvestBailey";
+  src: url("../font/HarvestBailey.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "HarvestBailey-Script";
+  src: url("../font/HarvestBailey-Script.ttf") format("woff2");
 }

@@ -123,8 +123,58 @@
   }
 }
 
+/* sec-work 영역 */
+.sec-work .inner {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.sec-work .text {
+  display: block;
+}
+
+.sec-work .work-list {
+  padding: 0 2.0833vw 100vh;
+}
+
+.sec-work .work-item {
+  position: relative;
+  height: 500px;
+}
+
+.sec-work .work-link {
+  position: absolute;
+  word-break: keep-all;
+}
+
+.sec-work .work-item.nanro .work-link {
+  right: 0;
+}
+
+.sec-work .work-item.hanatourcompany .work-link {
+  left: 0;
+}
+
+.sec-work .work-item.directhi .work-link {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sec-work .work-item.seoul .work-link {
+  left: 120px;
+}
+
+.sec-work .text-area .title {
+  padding-top: 10px;
+}
+
 /* 포트폴리오 영역 */
-.sec_portfolio .inner {
+/* .sec_portfolio .inner {
   padding: 320px 0;
 }
 
@@ -173,29 +223,29 @@
   position: relative;
   display: inline-block;
   transform: translateX(-10px);
-}
+} */
 
 .sec_portfolio .text-area .title-bg {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 1; */
   /* transform: translateY(100%); */
 }
 
 .sec_portfolio .text-area .title-name {
-  display: inline-block;
+  /* display: inline-block; */
   /* transform: translateY(100%); */
 }
 
 .sec_portfolio .text-area .sub-title {
-  display: block;
-  padding: 40px 0 20px;
+  /* display: block;
+  padding: 40px 0 20px; */
 }
 
-.sec_portfolio .link-list .item {
+/* .sec_portfolio .link-list .item {
   margin-bottom: 10px;
 }
 
@@ -245,7 +295,7 @@
   .sec_portfolio .more-link {
     width: 100%;
   }
-}
+} */
 
 /* 프론트엔드 포트폴리오 영역 */
 .sec-front_end {

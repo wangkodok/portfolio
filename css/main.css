@@ -22,8 +22,20 @@
   background: url("../image/icon_scroll_down_text.svg") no-repeat center / contain;
 }
 
+/* sec-work 영역 */
+.sec-work .sec-title .text {
+  font-size: 200px;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+
+.sec-work .sec-title .text-works {
+  font-family: var(--font-HarvestBailey);
+  font-weight: normal;
+}
+
 /* 포트폴리오 영역 */
-.sec_portfolio .portfolio-list .img-wrap {
+/* .sec_portfolio .portfolio-list .img-wrap {
   overflow: hidden;
   border-radius: 0 32px 0 0;
 }
@@ -35,7 +47,7 @@
 
 .sec_portfolio .portfolio-list .img-wrap.right {
   border-radius: 32px 0 0 0;
-}
+} */
 
 .sec_portfolio .text-area .title {
   /* font-size: 200px;
@@ -43,10 +55,10 @@
   font-family: var(--font-Montserrat);
   text-transform: uppercase;
   line-height: 1; */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-.sec_portfolio .text-area .title-bg {
+/* .sec_portfolio .text-area .title-bg {
   background-color: var(--color-black);
 }
 
@@ -103,7 +115,7 @@
   .sec_portfolio .link-list {
     font-size: 20px;
   }
-}
+} */
 
 /* 프론트엔드 포트폴리오 영역 */
 .sec-front_end .sec-title {

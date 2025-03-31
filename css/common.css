@@ -19,6 +19,7 @@
   /* 폰트 */
   --font-Montserrat: "Montserrat";
   --font-Pretendard: "Pretendard";
+  --font-HarvestBailey: "HarvestBailey";
 
   /* 아이덴티티 색상 */
   /* --color-black: #2d3029; */
@@ -383,3 +384,47 @@ button {
 .cursor-view.active {
   display: none;
 }
+
+/* 가로 스크롤 콘텐츠 영역 */
+/* .horizontal-scroll {
+  height: 100vh;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.horizontal-scroll .sec-title {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 200px;
+  text-transform: uppercase;
+  font-family: var(--font-HarvestBailey);
+  font-weight: normal;
+}
+
+.horizontal-scroll ul {
+  display: flex;
+  padding: 0 40px;
+}
+
+.horizontal-scroll li {
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+.horizontal-scroll li a {
+  display: block;
+}
+
+.horizontal-scroll li .img-wrap {
+  background-color: rgb(226, 54, 149);
+}
+
+.horizontal-scroll li img {
+  width: 100%;
+}
+
+.horizontal-scroll li p {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 700;
+} */
