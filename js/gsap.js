@@ -60,86 +60,116 @@ window.addEventListener("DOMContentLoaded", function () {
     delay: 0.3,
   });
 
-  // 가로 스크롤 콘텐츠 영역
-  const contents = document.querySelector("#contents");
-  const contentsList = document.querySelector("#contents ul");
-  const contentsItem = gsap.utils.toArray("#contents ul li");
+  // work-list 영역
+  const portfolioItemsTitleBg = gsap.utils.toArray("#sec-work .work-item");
+  portfolioItemsTitleBg.forEach((item) => {
+    const imgWrap = item.querySelector(".img-wrap");
+    const img = item.querySelector(".img-wrap img");
+    const bg = item.querySelector(".img-wrap .bg");
+    const titleArea = item.querySelector(".text-area");
+    const title = item.querySelector(".text-area .title");
 
-  // ScrollTrigger 애니메이션을 생성하는 함수
-  function createAnimation() {
-    // 기존 ScrollTrigger 인스턴스가 있다면 제거
-    ScrollTrigger.getAll().forEach(st => st.kill());
-
-    // totalWidth 계산
-    const totalWidth = contents.scrollWidth - document.body.scrollWidth + 80;
-
-    // 새로운 애니메이션 생성
-    const scrollTween = gsap.to(contentsItem, {
-      ease: "none",
-      x: -totalWidth,
+    gsap.set(imgWrap, { overflow: "hidden", });
+    gsap.set(titleArea, { overflow: "hidden", });
+    gsap.set(title, { overflow: "hidden", });
+    gsap.set([img, bg], { x: "-100%", });
+    gsap.set(title, { y: "100%", });
+    const loading = gsap.timeline({
       scrollTrigger: {
-        trigger: contents,
-        scroller: "body",
+        trigger: item,
+        start: "0 100%",
+        end: "bottom bottom",
         markers: true,
-        start: "top top",
-        end: () => "+=" + contents.scrollWidth,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
       }
     });
+    // loading.to([img, bg], { x: "0%", });
+    loading.to(title, { y: "0%", });
+    loading.to([bg, img], { x: "0%", });
+    loading.to(bg, { x: "100%", });
+    // loading.to(bg, { x: "100%", });
+    // loading.to(img, { x: "0%", });
+  });
 
-    // 가로 스크롤 시 애니메이션
-    gsap.from(".img_08 img", {
-      y: 200,
-      duration: 2,
-      ease: "elastic",
-      scrollTrigger: {
-        trigger: ".img_08 img",
-        containerAnimation: scrollTween,
-        start: "center center",
-        end: "100% 100%",
-        toggleActions: "play none reverse none",
-        // markers: true,
-        id: "img_08 img"
-      }
-    });
+  // 가로 스크롤 콘텐츠 영역
+  // const contents = document.querySelector("#contents");
+  // const contentsList = document.querySelector("#contents ul");
+  // const contentsItem = gsap.utils.toArray("#contents ul li");
 
-    gsap.from(".img_09 img", {
-      y: 200,
-      duration: 2,
-      ease: "elastic",
-      scrollTrigger: {
-        trigger: ".img_09 img",
-        containerAnimation: scrollTween,
-        start: "0 50%",
-        end: "100% 100%",
-        // toggleActions: "play none reverse none",
-        // markers: true,
-        // id: "img_09 img"
-      }
-    });
-  }
+  // // ScrollTrigger 애니메이션을 생성하는 함수
+  // function createAnimation() {
+  //   // 기존 ScrollTrigger 인스턴스가 있다면 제거
+  //   ScrollTrigger.getAll().forEach(st => st.kill());
 
-  // 초기 애니메이션 생성
-  createAnimation();
+  //   // totalWidth 계산
+  //   const totalWidth = contents.scrollWidth - document.body.scrollWidth + 80;
 
-  // 리사이즈 이벤트에 대한 디바운스 함수
-  function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  }
+  //   // 새로운 애니메이션 생성
+  //   const scrollTween = gsap.to(contentsItem, {
+  //     ease: "none",
+  //     x: -totalWidth,
+  //     scrollTrigger: {
+  //       trigger: contents,
+  //       scroller: "body",
+  //       markers: true,
+  //       start: "top top",
+  //       end: () => "+=" + contents.scrollWidth,
+  //       scrub: 1,
+  //       pin: true,
+  //       anticipatePin: 1,
+  //       invalidateOnRefresh: true,
+  //     }
+  //   });
 
-  // 리사이즈 이벤트 리스너 등록
-  window.addEventListener('resize', debounce(() => {
-    createAnimation();
-  }, 300));
+  //   // 가로 스크롤 시 애니메이션
+  //   gsap.from(".img_08 img", {
+  //     y: 200,
+  //     duration: 2,
+  //     ease: "elastic",
+  //     scrollTrigger: {
+  //       trigger: ".img_08 img",
+  //       containerAnimation: scrollTween,
+  //       start: "center center",
+  //       end: "100% 100%",
+  //       toggleActions: "play none reverse none",
+  //       // markers: true,
+  //       id: "img_08 img"
+  //     }
+  //   });
+
+  //   gsap.from(".img_09 img", {
+  //     y: 200,
+  //     duration: 2,
+  //     ease: "elastic",
+  //     scrollTrigger: {
+  //       trigger: ".img_09 img",
+  //       containerAnimation: scrollTween,
+  //       start: "0 50%",
+  //       end: "100% 100%",
+  //       // toggleActions: "play none reverse none",
+  //       // markers: true,
+  //       // id: "img_09 img"
+  //     }
+  //   });
+  // }
+
+  // // 초기 애니메이션 생성
+  // createAnimation();
+
+  // // 리사이즈 이벤트에 대한 디바운스 함수
+  // function debounce(func, wait) {
+  //   let timeout;
+  //   return function executedFunction(...args) {
+  //     const later = () => {
+  //       clearTimeout(timeout);
+  //       func(...args);
+  //     };
+  //     clearTimeout(timeout);
+  //     timeout = setTimeout(later, wait);
+  //   };
+  // }
+
+  // // 리사이즈 이벤트 리스너 등록
+  // window.addEventListener('resize', debounce(() => {
+  //   createAnimation();
+  // }, 300));
 });
