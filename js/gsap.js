@@ -142,36 +142,4 @@ window.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('resize', debounce(() => {
     createAnimation();
   }, 300));
-
-  // work-list 영역
-  const portfolioItemsTitleBg = gsap.utils.toArray("#sec-work .work-item");
-  portfolioItemsTitleBg.forEach((item) => {
-    const imgWrap = item.querySelector(".img-wrap");
-    const img = item.querySelector(".img-wrap img");
-    const bg = item.querySelector(".img-wrap .bg");
-    const titleArea = item.querySelector(".text-area");
-    const title = item.querySelector(".text-area .title");
-
-    gsap.set(imgWrap, { overflow: "hidden", });
-    gsap.set(titleArea, { overflow: "hidden", });
-    gsap.set(title, { overflow: "hidden", });
-    gsap.set([img, bg], { x: "-100%", });
-    gsap.set(title, { y: "100%", });
-    const loading = gsap.timeline({
-      scrollTrigger: {
-        trigger: item,
-        start: "0 100%",
-        end: "bottom bottom",
-        markers: true,
-      }
-    });
-    // loading.to([img, bg], { x: "0%", });
-    loading.to(title, { y: "0%", });
-    loading.to([bg, img], { x: "0%", });
-    loading.to(bg, { x: "100%", });
-    // loading.to(bg, { x: "100%", });
-    // loading.to(img, { x: "0%", });
-  });
-
-
 });

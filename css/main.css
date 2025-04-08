@@ -22,18 +22,6 @@
   background: url("../image/icon_scroll_down_text.svg") no-repeat center / contain;
 }
 
-/* sec-work 영역 */
-.sec-work .sec-title .text {
-  font-size: 200px;
-  text-transform: uppercase;
-  mix-blend-mode: difference;
-}
-
-.sec-work .sec-title .text-works {
-  font-family: var(--font-HarvestBailey);
-  font-weight: normal;
-}
-
 /* 프론트엔드 포트폴리오 영역 */
 .sec-front_end .sec-title {
   font-family: var(--font-Montserrat);
