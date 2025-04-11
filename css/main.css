@@ -22,6 +22,27 @@
   background: url("../image/icon_scroll_down_text.svg") no-repeat center / contain;
 }
 
+/* 소개 영역 */
+.sec-intro .text-wrap .title {
+  font-size: 100px;
+  font-family: var(--font-HarvestBailey);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.sec-intro .text-wrap .desc {
+  font-size: 52px;
+  line-height: 2;
+  word-break: keep-all;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.sec-intro .text-wrap .fw {
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* 프론트엔드 포트폴리오 영역 */
 .sec-front_end .sec-title {
   font-family: var(--font-Montserrat);

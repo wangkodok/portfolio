@@ -123,6 +123,32 @@
   }
 }
 
+/* 소개 영역 */
+.sec-intro .inner {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.sec-intro .text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sec-intro .text-wrap .title {
+  margin-bottom: 40px;
+}
+
+.sec-intro .text-wrap .desc {
+  text-align: center;
+}
+
+.sec-intro .text-wrap .desc + .desc {
+  margin-top: 24px;
+}
+
 /* 프론트엔드 포트폴리오 영역 */
 .sec-front_end {
   margin-bottom: 15.625vw;
