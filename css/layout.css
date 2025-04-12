@@ -123,6 +123,46 @@
   }
 }
 
+/* 비주얼 */
+.sec-visual_wrap .inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sec-visual_wrap .text-wrap {
+  position: relative;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.sec-visual_wrap .text-wrap .text {
+  display: flex;
+}
+
+.sec-visual_wrap .text-wrap .text:nth-child(2n-1) {
+  justify-content: center;
+}
+
+.sec-visual_wrap .desc-wrap {
+  position: absolute;
+  top: calc(50% - 42px);
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.sec-visual_wrap .scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 160px;
+  background-color: #000;
+}
+
 /* 소개 영역 */
 .sec-intro .inner {
   width: 1600px;
