@@ -282,7 +282,7 @@ button {
   z-index: 999999;
   width: 10px;
   height: 10px;
-  background-color: var(--color-black);
+  background-color: #fe4049;
   border-radius: 999px;
   /* top: 0; */
   /* left: 0; */
