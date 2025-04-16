@@ -1,27 +1,5 @@
 @charset "utf-8";
 
-/* 비주얼 영역 */
-.sec-visual .title-area {
-  color: var(--color-black);
-  text-transform: uppercase;
-}
-
-.sec-visual .title-area .text {
-  font-size: 10.4167vw;
-  font-weight: 900;
-  overflow: hidden;
-}
-
-.sec-visual .title-area .scroll-down {
-  transform: rotate(90deg);
-  background: url("../image/icon_scroll_down_arrow.svg") no-repeat center / auto 3.333vw;
-}
-
-.sec-visual .title-area .scroll-down::after {
-  content: "";
-  background: url("../image/icon_scroll_down_text.svg") no-repeat center / contain;
-}
-
 /* 비주얼 */
 .sec-visual_wrap .text-wrap {
   text-transform: uppercase;
