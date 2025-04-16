@@ -47,24 +47,37 @@
 }
 
 /* 소개 영역 */
+.sec-intro {
+  background-color: #000;
+}
+
+.sec-intro .text-wrap {
+  color: #fff;
+}
+
 .sec-intro .text-wrap .title {
-  font-size: 100px;
+  font-size: 52px;
   font-family: var(--font-HarvestBailey);
   font-weight: normal;
   text-transform: uppercase;
 }
 
+.sec-intro .text-wrap .line {
+  background-color: #434343;
+}
+
 .sec-intro .text-wrap .desc {
-  font-size: 52px;
-  line-height: 2;
+  font-size: 36px;
   word-break: keep-all;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 100;
+  color: #f5f5f5;
 }
 
 .sec-intro .text-wrap .fw {
   font-weight: 700;
   font-style: normal;
+  color: #fff;
 }
 
 /* 프론트엔드 포트폴리오 영역 */
