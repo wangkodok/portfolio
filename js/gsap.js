@@ -1,63 +1,23 @@
 window.addEventListener("DOMContentLoaded", function () {
-  // 비주얼 텍스트
-  const helloAnimation = document.querySelectorAll("#text-hello-animation .tw");
-  gsap.to("#text-hello-animation", {
-    display: "flex",
+  // 비주얼 영역
+  gsap.from("#sec-visual .scroll-down", {
+    height: 0,
   });
 
-  gsap.from(helloAnimation, {
-    y: "100%",
-    duration: 0.5,
-    stagger: 0.05,
-  });
-
-  const uiDeveloperAnimation = document.querySelectorAll("#text-uideveloper-animation .tw");
-  gsap.to("#text-uideveloper-animation", {
-    display: "flex",
-  });
-
-  gsap.from(uiDeveloperAnimation, {
-    y: "100%",
-    duration: 0.5,
-    stagger: 0.05,
-    delay: 0.2,
-  });
-
-  const textUxpublisherAnimation = document.querySelectorAll("#text-uxpublisher-animation .tw");
-  gsap.to("#text-uxpublisher-animation", {
-    display: "flex",
-  });
-
-  gsap.from(textUxpublisherAnimation, {
-    y: "100%",
-    duration: 0.5,
-    stagger: 0.05,
-    delay: 0.3,
-  });
-
-  // 비주얼 스크롤 다운
-  const scrollDownStartOption = {
-    opacity: 0
-  }
-
-  const scrollDownEndOption = {
-    opacity: 1,
-    duration: 1.5,
+  gsap.to("#sec-visual .text-wrap .text", {
+    y: 0,
+    duration: 1,
+    ease: "power2.out",
+    stagger: 0.2,
     delay: 0.5,
-  }
-
-  gsap.fromTo("#sec-visual .scroll-down", scrollDownStartOption, scrollDownEndOption);
-
-  // 비주얼 이미지
-  gsap.to("#sec-visual .img-wrap", {
-    overflow: "hidden",
   });
 
-  gsap.from("#sec-visual .img-wrap img", {
-    y: "100%",
-    duration: 0.5,
-    stagger: 0.05,
-    delay: 0.3,
+  gsap.to("#sec-visual .desc-wrap .desc", {
+    y: 0,
+    duration: 1,
+    ease: "power2.out",
+    stagger: 0.2,
+    delay: 1,
   });
 
   // 가로 스크롤 콘텐츠 영역

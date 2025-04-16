@@ -15,12 +15,20 @@
   margin: 0 auto;
 }
 
-.sec-visual_wrap .text-wrap .text {
+.sec-visual_wrap .text-wrap .tag-wrap {
   display: flex;
 }
 
-.sec-visual_wrap .text-wrap .text:nth-child(2n-1) {
+.sec-visual_wrap .text-wrap .tag-wrap:nth-child(2n-1) {
   justify-content: center;
+}
+
+#sec-visual .text-wrap .text {
+  transform: translateY(100%);
+}
+
+#sec-visual .desc-wrap .desc {
+  transform: translateY(100%);
 }
 
 .sec-visual_wrap .desc-wrap {

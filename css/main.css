@@ -8,7 +8,7 @@
 .sec-visual_wrap .text-wrap .title {
   position: absolute;
 }
-.sec-visual_wrap .text-wrap .text {
+.sec-visual_wrap .text-wrap .tag-wrap {
   height: 0.87em;
   font-family: var(--font-Pretendard);
   font-size: 8.75vw;
@@ -16,7 +16,7 @@
   letter-spacing: -0.02em;
 }
 
-.sec-visual_wrap .text-wrap .text:nth-child(2n-1) {
+.sec-visual_wrap .text-wrap .tag-wrap:nth-child(2n-1) {
   height: 0.825em;
   font-family: var(--font-HarvestBailey);
   line-height: 0.95em;

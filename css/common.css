@@ -55,6 +55,11 @@ section[class^="sec-vh"] {
   text-align: right;
 }
 
+/* emmet */
+.ovh {
+  overflow: hidden;
+}
+
 .header {
   position: fixed;
   top: 0;
