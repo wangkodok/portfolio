@@ -2,10 +2,10 @@
 
 /* 비주얼 */
 .sec-visual_wrap .inner {
-  position: relative;
   display: flex;
-  justify-content: center;
+  position: relative;
   flex-direction: column;
+  justify-content: center;
   height: 100vh;
 }
 
@@ -32,11 +32,11 @@
 
 .sec-visual_wrap .scroll-down {
   position: absolute;
-  left: 50%;
   bottom: 0;
-  transform: translateX(-50%);
+  left: 50%;
   width: 2px;
   height: 160px;
+  transform: translateX(-50%);
   background-color: #000;
 }
 
@@ -76,8 +76,8 @@
 .sec-front_end .sec-title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
   padding: 0 40px;
+  margin-bottom: 40px;
 }
 
 .sec-front_end .work-list {

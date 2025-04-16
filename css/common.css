@@ -28,8 +28,8 @@
 }
 
 html {
-  background-color: var(--color-white);
   color: var(--color-black);
+  background-color: var(--color-white);
   font-family: var(--font-Pretendard);
   font-size: 16px;
 }
@@ -64,8 +64,8 @@ section[class^="sec-vh"] {
 }
 
 .header .inner {
-  position: relative;
   display: flex;
+  position: relative;
   justify-content: space-between;
   padding: 14px 30px;
   font-size: 14px;
@@ -78,12 +78,12 @@ section[class^="sec-vh"] {
   position: absolute;
   top: 50%;
   left: 50%;
+  background: none;
   transform: translate(-50%, -50%);
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
   text-transform: uppercase;
-  background: none;
 }
 
 /* 네비게이션 영역 */
@@ -113,9 +113,9 @@ section[class^="sec-vh"] {
 
 .footer .inner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
   border-top: 1px solid var(--color-black);
 }
@@ -176,12 +176,12 @@ section[class^="sec-vh"] {
 .textTyping::before {
   content: "";
   position: absolute;
-  right: -42px; /* 타이핑 커서 위치 */
   top: 50%;
+  right: -42px; /* 타이핑 커서 위치 */
+  width: 37px; /* 타이핑 커서 가로 사이즈 */
   /* bottom: 0px; */
   height: 200px;
   transform: translateY(-50%);
-  width: 37px; /* 타이핑 커서 가로 사이즈 */
   background-color: var(--color-black); /* 타이핑 커서 색상 */
   animation: blink 0.1s infinite;
 }
@@ -198,8 +198,8 @@ section[class^="sec-vh"] {
 
 /* 콘텐츠 더 보기 */
 .more-link {
-  position: relative;
   display: inline-flex;
+  position: relative;
   align-items: center;
   height: 20px;
   padding: 10px 0;
@@ -230,10 +230,10 @@ section[class^="sec-vh"] {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translate(0, calc(-50%));
   width: 36px;
   height: 18px;
   background: url("../image/icon_more_arrow_black.svg") no-repeat center / contain;
+  transform: translate(0, calc(-50%));
   transition: transform .35s linear;
   -webkit-transition: transform .35s linear;
 }
@@ -256,7 +256,7 @@ section[class^="sec-vh"] {
 }
 
 /* 스크롤 시 가로 콘텐츠 */
-#horizontal_scroll {height: 100vh; overflow: hidden;}
+#horizontal_scroll { overflow: hidden;height: 100vh;}
 #horizontal_scroll h2 {margin-bottom: 60px; text-align: center; font-size: 2.25rem;}
 #horizontal_scroll ul {display: flex; padding: 0 40px;}
 #horizontal_scroll li {flex-shrink: 0; margin-right: 40px;}
@@ -274,6 +274,7 @@ button {
 
 .cursor {
   position: fixed;
+  z-index: 999999;
   width: 10px;
   height: 10px;
   background-color: var(--color-black);
@@ -283,7 +284,6 @@ button {
   pointer-events: none;
   will-change: transform, width, height;
   transform: translate(-50%, -50%);
-  z-index: 999999;
   opacity: 0;
 }
 
@@ -292,27 +292,27 @@ button {
 }
 
 .cursor-view {
-  position: fixed;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
-  border-radius: 999px;
+  position: fixed;
   top: -45px;
   left: -45px;
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white);
+  border-radius: 999px;
   pointer-events: none;
   will-change: transform, width, height;
   transform: translate(-50%, -50%);
-  z-index: 999999;
   opacity: 0;
 }
 
 .cursor-view .text {
-  font-size: 24px;
   color: var(--color-black);
+  font-size: 24px;
 }
 
 .cursor-view.active {
@@ -321,17 +321,17 @@ button {
 
 /* 가로 스크롤 콘텐츠 영역 */
 .horizontal-scroll {
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
 }
 
 .horizontal-scroll .sec-title {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   display: flex;
+  position: absolute;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   font-size: 560px;
   text-transform: uppercase;
   font-family: var(--font-HarvestBailey);
@@ -340,9 +340,9 @@ button {
 
 .horizontal-scroll ul {
   display: flex;
-  padding: 0 100vw;
-  height: 100vh;
   align-items: center;
+  height: 100vh;
+  padding: 0 100vw;
 }
 
 .horizontal-scroll li {
@@ -356,24 +356,24 @@ button {
 }
 
 .horizontal-scroll li .desc {
+  display: flex;
   position: absolute;
   bottom: 0;
   left: 0;
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  font-size: 24px;
-  padding: 10px;
+  flex-wrap: wrap;
   align-items: flex-start;
+  padding: 10px;
+  font-size: 24px;
 }
 
 .horizontal-scroll li .keyword {
   display: block;
+  padding: 10px 20px;
+  color: #fff;
   font-size: 16px;
   margin-right: 10px;
   margin-top: 10px;
-  padding: 10px 20px;
   background-color: var(--color-black);
-  color: #fff;
   border-radius: 999px;
 }
