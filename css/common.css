@@ -114,32 +114,122 @@ section[class^="sec-vh"] {
 
 .footer {
   position: relative;
+  background-color: var(--color-black);
 }
 
 .footer .inner {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-top: 1px solid var(--color-black);
+  padding: 100px 30px;
 }
 
 .footer .sec-title .title {
   font-size: 20px;
 }
 
+.footer .layout-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .last-desc {
+  width: 60%;
+}
+
+.footer .last-desc .text-wrap {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .last-desc .text {
+  color: #fff;
+  font-size: 160px;
+  font-family: var(--font-HarvestBailey);
+  text-transform: capitalize;
+  line-height: 0.95em;
+  letter-spacing: 0;
+  word-spacing: -0.3em;
+}
+
+.footer .last-desc .desc-wrap {
+  position: absolute;
+  top: calc(50% + 36px);
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.footer .last-desc .desc {
+  color: #fff;
+  font-size: 24px;
+}
+
+.footer .email-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.footer .circle-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background-color: #fff;
+  margin-right: 40px;
+}
+
+.footer .circle-arrow svg {
+  width: 60px;
+  height: auto;
+}
+
+.footer .text-email {
+  color: #fff;
+  font-family: var(--font-Montserrat);
+  font-size: 40px;
+  font-style: italic;
+}
+
 .footer .sns-list {
   display: flex;
+  align-items: flex-end;
+  height: 100%;
 }
 
 .footer .sns-item {
-  margin: 10px;
+  padding-bottom: 48px;
+}
+
+.footer .sns-item + .sns-item {
+  margin-left: 40px;
 }
 
 .footer .sns-item a {
-  padding: 10px;
-  font-size: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.footer .sns-item .icon {
+  width: 100px;
+  height: 40px;
+  filter: invert(100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.footer .sns-item .icon.github {
+  background-image: url("../image/icon_github.svg");
+}
+
+.footer .sns-item .icon.tistory {
+  background-image: url("../image/icon_tistory.svg");
+}
+
+.footer .sns-item .icon.velog {
+  background-image: url("../image/icon_velog.svg");
 }
 
 @media screen and (max-width: 1600px) {
