@@ -376,23 +376,27 @@ button {
 .cursor {
   position: fixed;
   z-index: 999999;
-  width: 10px;
-  height: 10px;
+  width: 40px;
+  height: 40px;
   background-color: #fe4049;
   border-radius: 999px;
-  /* top: 0; */
-  /* left: 0; */
+  top: -20px;
+  left: -20px;
   pointer-events: none;
   will-change: transform, width, height;
   transform: translate(-50%, -50%);
   opacity: 0;
+  transition: width 0.1s ease, height 0.1s ease, top 0.1s ease, left 0.1s ease;
 }
 
 .cursor.active {
-  display: none;
+  width: 10px;
+  height: 10px;
+  top: -5px;
+  left: -5px;
 }
 
-.cursor-view {
+/* .cursor-view {
   display: flex;
   position: fixed;
   top: -45px;
@@ -418,7 +422,7 @@ button {
 
 .cursor-view.active {
   display: none;
-}
+} */
 
 /* 가로 스크롤 콘텐츠 영역 */
 .horizontal-scroll {

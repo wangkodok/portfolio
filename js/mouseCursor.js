@@ -1,7 +1,6 @@
 window.addEventListener("load", () => {
   const cursor = document.querySelector(".cursor");
-  const cursorView = document.querySelector(".cursor-view");
-  const hover = document.querySelectorAll("a");
+  // const cursorView = document.querySelector(".cursor-view");
 
   let mouseX = 0;
   let mouseY = 0;
@@ -15,8 +14,7 @@ window.addEventListener("load", () => {
       isMoving = true;
     }
 
-    console.log(e.target.tagName)
-    if (e.target.tagName === "A") {
+    if (e.target.tagName === "A" || e.target.tagName === "IMG") {
       isATag = true;
     } else {
       isATag = false;
@@ -31,8 +29,8 @@ window.addEventListener("load", () => {
       cursor.style.transform = `translate3d(${mouseX - scrollLeft}px, ${mouseY - scrollTop}px, 0)`;
       cursor.style.opacity = "1";
 
-      cursorView.style.transform = `translate3d(${mouseX - scrollLeft}px, ${mouseY - scrollTop}px, 0)`;
-      cursorView.style.opacity = "1";
+      // cursorView.style.transform = `translate3d(${mouseX - scrollLeft}px, ${mouseY - scrollTop}px, 0)`;
+      // cursorView.style.opacity = "1";
       // cursorView도 동일하게 처리 가능
       // cursorView.style.transform = `translate3d(${mouseX - scrollLeft}px, ${mouseY - scrollTop}px, 0)`;
 
@@ -40,12 +38,14 @@ window.addEventListener("load", () => {
     }
     
     if (isATag) {
-      cursor.style.display = "none";
-      cursorView.style.display = "flex";
+      cursor.classList.add("active");
+      // cursor.style.display = "none";
+      // cursorView.style.display = "flex";
 
     } else {
-      cursor.style.display = "block";
-      cursorView.style.display = "none";
+      cursor.classList.remove("active");
+      // cursor.style.display = "block";
+      // cursorView.style.display = "none";
     }
 
     requestAnimationFrame(animateCursor);
