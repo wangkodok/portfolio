@@ -428,6 +428,7 @@ button {
 .horizontal-scroll {
   overflow: hidden;
   height: 100vh;
+  position: relative;
 }
 
 .horizontal-scroll .sec-title {
