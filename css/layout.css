@@ -11,7 +11,8 @@
 
 .sec-visual_wrap .text-wrap {
   position: relative;
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -50,7 +51,8 @@
 
 /* 소개 영역 */
 .sec-intro .inner {
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
