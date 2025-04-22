@@ -8,6 +8,7 @@
 .sec-visual_wrap .text-wrap .title {
   position: absolute;
 }
+
 .sec-visual_wrap .text-wrap .tag-wrap {
   height: 0.87em;
   font-family: var(--font-Pretendard);
@@ -34,7 +35,7 @@
 }
 
 .sec-intro .text-wrap .title {
-  font-size: 52px;
+  font-size: 2.7083vw;
   font-family: var(--font-HarvestBailey);
   font-weight: normal;
   text-transform: uppercase;
@@ -46,7 +47,7 @@
 
 .sec-intro .text-wrap .desc {
   color: #f5f5f5;
-  font-size: 36px;
+  font-size: max(32px, 1.8750vw);
   word-break: keep-all;
   line-height: 1.5;
   font-weight: 100;
@@ -56,4 +57,48 @@
   color: #fff;
   font-weight: 700;
   font-style: normal;
+}
+
+@media screen and (max-width: 1200px) {
+  /* 비주얼 */
+  .sec-visual_wrap .text-wrap .tag-wrap {
+    font-size: 13.3333vw;
+  }
+
+  .sec-visual_wrap .desc-wrap {
+    font-size: 1.6667vw;
+  }
+
+  /* 소개 영역 */
+  .sec-intro .inner {
+    max-width: 90vw;
+  }
+
+  .sec-intro .text-wrap .title {
+    font-size: 4vw;
+  }
+
+  .sec-intro .text-wrap .desc {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* 비주얼 */
+  .sec-visual_wrap .desc-wrap {
+    font-size: max(14px, 2.6076vw);
+  }
+
+  /* 소개 영역 */
+  .sec-intro .text-wrap .title {
+    font-size: 36px;
+  }
+
+  .sec-intro .text-wrap .desc {
+    font-size: 18px;
+  }
+
+  .sec-intro .text-wrap .desc br {
+    display: none;
+  }
 }

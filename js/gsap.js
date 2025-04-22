@@ -30,6 +30,12 @@ window.addEventListener("DOMContentLoaded", function () {
     // 기존 ScrollTrigger 인스턴스가 있다면 제거
     ScrollTrigger.getAll().forEach(st => st.kill());
 
+    const windowWidth = window.innerWidth;
+    if (windowWidth <= 1200) {
+      gsap.set(hsItem, { clearProps: "all" });
+      return;
+    }
+
     // totalWidth 계산
     const totalWidth = hs.scrollWidth - document.body.scrollWidth + 40;
 
