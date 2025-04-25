@@ -302,7 +302,7 @@ section[class^="sec-vh"] {
   }
 
   .footer .last-desc .desc {
-    font-size: 2.6042vw;
+    font-size: max(14px, 2.6042vw);
   }
 
   .footer .email-wrap {
@@ -319,7 +319,7 @@ section[class^="sec-vh"] {
   }
 
   .footer .text-email {
-    font-size: 4.1667vw;
+    font-size: max(14px, 4.1667vw);
   }
 
   .footer .info {
@@ -335,7 +335,7 @@ section[class^="sec-vh"] {
   }
 
   .footer .sns-item .icon {
-    width: 8.3333vw;
+    width: max(48px, 8.3333vw);
     height: 4.1667vw;
   }
 }
