@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", function () {
       scrollTrigger: {
         trigger: hs,
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top top",
         end: () => "+=" + hs.scrollWidth,
         scrub: 1,
