@@ -387,6 +387,15 @@
         }
       });
     });
+
+    // ios safari height: 100vh; 높이 해결하기 위한 코드
+    function setVh() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    window.addEventListener('load', setVh); // 페이지 로드 시 계산
+    window.addEventListener('resize', setVh); // 뷰포트 크기 변경될 때 재계산
   </script>
 </body>
 
