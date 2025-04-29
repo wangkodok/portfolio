@@ -480,12 +480,15 @@ button {
   left: -5px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
+  html,
+  a,
+  button {
+    cursor: auto;
+  }
+
   .cursor {
-    width: 28px;
-    height: 28px;
-    top: -14px;
-    left: -14px;
+    display: none;
   }
 }
 
