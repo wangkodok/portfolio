@@ -1,4 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
+  // 화면 표시
+  document.body.classList.add("loaded");
+
   // 비주얼 영역
   gsap.from("#sec-visual .scroll-down", {
     height: 0,
