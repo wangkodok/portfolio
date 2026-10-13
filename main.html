@@ -12,17 +12,31 @@
   <link rel="stylesheet" href="./css/main.css">
   <title>포트폴리오 - Portfolio</title>
   <style>
-    body {
+    /* body {
       visibility: hidden;
     }
 
     body.loaded {
       visibility: visible;
-    }
+    } */
   </style>
 </head>
 
 <body>
+  <div id="page-loader" class="page-loader" role="status" aria-label="페이지 로딩 중">
+    <div class="loader-inner">
+      <p class="loader-title">Web Site Loading..</p>
+
+      <strong class="loader-percent" aria-hidden="true">
+        <span class="loader-number">0</span>
+      </strong>
+
+      <div class="loader-track">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
   <div class="wrapper">
     <div class="cursor">
     </div>
@@ -297,10 +311,16 @@
       // 스크롤 시 부드럽게
       const lenis = new Lenis();
 
+      // 로딩 중 스크롤 정지
+      lenis.stop();
+
+      // gsap.js에서도 접근할 수 있도록 저장
+      window.lenis = lenis;
+
       lenis.on('scroll', ScrollTrigger.update);
 
       gsap.ticker.add((time) => {
-        lenis.raf(time * 750);
+        lenis.raf(time * 1000);
       });
 
       gsap.ticker.lagSmoothing(0);

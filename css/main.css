@@ -102,3 +102,60 @@
     display: none;
   }
 }
+
+/* 전체 로딩 화면 */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* 로딩 콘텐츠 */
+.loader-inner {
+  width: min(320px, 80%);
+  text-align: center;
+}
+
+.loader-title {
+  font-size: 16px;
+  font-family: var(--font-HarvestBailey);
+  letter-spacing: 4px;
+}
+
+.loader-percent {
+  display: block;
+  margin: 24px 0;
+  font-size: clamp(64px, 12vw, 120px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.loader-number {
+  display: inline-block;
+  width: 3ch;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1px;
+}
+
+/* 프로그레스 바 */
+.loader-track {
+  width: 100%;
+  height: 8px;
+  padding: 16px;
+  background-color: var(--color-black);
+  overflow: hidden;
+}
+
+.loader-bar {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
